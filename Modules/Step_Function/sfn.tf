@@ -1,24 +1,24 @@
 resource "aws_iam_role" "iam_for_sfn" {
   name = var.iam_role_for_sfn
-  assume_role_policy = var.assume_role_policy_for_sfn
+  assume_role_policy = file("./Modules/Step_Function/assume_role_policy.json")
 }
 
 resource "aws_iam_policy" "policy_for_dynamodb" {
 
- name = "policy_for_dynamodb"
+ name = var.iam_policy_name_for_dynamodb
  policy = file("./Modules/Step_Function/policy_dynamodb.json")
 
 }
 
 
 resource "aws_iam_policy_attachment" "attach_policy_to_role_sfn" {
-  name       = "attach_policy_to_role_sfn"
+  name       = var.iam_policy_attachment_to_sfn
   roles      = [aws_iam_role.iam_for_sfn.name]
   policy_arn = aws_iam_policy.policy_for_dynamodb.arn
 }
 
 resource "aws_iam_policy_attachment" "attach_policy_cloudwatch_sfn" {
-  name       = "attach_policy_cloudwatch_sfn"
+  name       = var.iam_policy_attachment_to_cloudwatch_sfn
   roles      = [aws_iam_role.iam_for_sfn.name]
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }

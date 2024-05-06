@@ -29,4 +29,7 @@ s3_force_destroy = true
 
 ######################################### STEP FUNCTION ###########################################
 iam_role_for_sfn = "iam_for_sfn"
-assume_role_policy_for_sfn = "Modules/Step_Function/assume_role_policy.json"
+iam_policy_name_for_dynamodb = "policy_for_dynamodb"
+iam_policy_attachment_to_sfn = "attach_policy_to_role_sfn"
+iam_policy_attachment_to_cloudwatch_sfn = "attach_policy_cloudwatch_sfn"
+state_machine_name = "sfn_state_machine"

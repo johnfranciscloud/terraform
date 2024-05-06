@@ -1,7 +1,10 @@
 module "step_function"{
   source = "./Modules/Step_Function"
   iam_role_for_sfn = var.iam_role_for_sfn
-  assume_role_policy_for_sfn = var.assume_role_policy_for_sfn
+  iam_policy_name_for_dynamodb = var.iam_policy_name_for_dynamodb
+  iam_policy_attachment_to_sfn = var.iam_policy_attachment_to_sfn
+  iam_policy_attachment_to_cloudwatch_sfn = var.iam_policy_attachment_to_cloudwatch_sfn
+  state_machine_name = var.state_machine_name
 }
 
 module "lambda"{
