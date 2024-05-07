@@ -1,6 +1,6 @@
 ### Project Architecture
 
-![architecture](Architecture/assignment.drawio.png)
+![architecture][/Architecture/image.png] 
 
 I followed a modularized approach in this project. Each resource has been designed to be in seperate modules with data being passed on between them via terraform variables.
 
@@ -61,3 +61,6 @@ DynamoDB
 
 I have created a dynamodb with table name "Files" and key name as "FileName"
 
+
+
+[def]: image.png
