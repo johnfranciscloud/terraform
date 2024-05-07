@@ -1,11 +1,13 @@
-Project Architecture
+### Project Architecture
 
-![architecture]((Architecture/assignment.drawio.png))
+![architecture](Architecture/assignment.drawio.png)
 
 I followed a modularized approach in this project. Each resource has been designed to be in seperate modules with data being passed on between them via terraform variables.
 
 
-Terraform Infracstucture
+### Terraform Infracstucture
+
+Following resources are created in this project
 
 DynamoDB Table
 AWS Lambda Function
@@ -16,7 +18,7 @@ Prerequisites
 
 Before starting,I have installed Terraform on my local machine and configured AWS account credentials with appropiate permissions.
 
-Terraform File Structure
+### Terraform File Structure
 
 The Terraform configuration is organized into modules:
 
@@ -33,7 +35,7 @@ provider.tf: Specifies the AWS provider configuration.
 backend.tf: Configures the backend for storing Terraform state.
 output.tf: Defines output variables to display after Terraform applies changes.
 
-How it works
+### How does it works
 
 S3
 
