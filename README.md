@@ -64,7 +64,7 @@ The Terraform configuration is organized into modules:
 
   I have created a dynamodb with table name "Files" and key name as "FileName"
 
-  ### Future Improvemnts
+  ### Future Improvements
 
   - Monitoring and Logging: 
     Implement monitoring and logging solutions to track the performance and health of your infrastructure. This could include setting up CloudWatch alarms, logging Lambda function execution, and monitoring DynamoDB table activity.
