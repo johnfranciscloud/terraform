@@ -10,7 +10,6 @@ resource "aws_iam_policy" "policy_for_dynamodb" {
 
 }
 
-
 resource "aws_iam_policy_attachment" "attach_policy_to_role_sfn" {
   name       = var.iam_policy_attachment_to_sfn
   roles      = [aws_iam_role.iam_for_sfn.name]
@@ -20,11 +19,11 @@ resource "aws_iam_policy_attachment" "attach_policy_to_role_sfn" {
 resource "aws_iam_policy_attachment" "attach_policy_cloudwatch_sfn" {
   name       = var.iam_policy_attachment_to_cloudwatch_sfn
   roles      = [aws_iam_role.iam_for_sfn.name]
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  policy_arn = var.iam_cloudwatch_policy_for_sfn
 }
 
 resource "aws_sfn_state_machine" "sfn_state_machine" {
-  name     = "sfn_state_machine"
+  name     = var.state_machine_name
   role_arn = aws_iam_role.iam_for_sfn.arn
 
   definition = <<EOF

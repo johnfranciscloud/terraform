@@ -26,6 +26,7 @@ s3bucket_name = "file-upload-s3bucket-john"
 s3_tf_statement_id = "AllowExecutionFromS3Bucket"
 allowed_lambda_action = "lambda:InvokeFunction"
 s3_force_destroy = true
+lambda_function_event = ["s3:ObjectCreated:*"]
 
 ######################################### STEP FUNCTION ###########################################
 iam_role_for_sfn = "iam_for_sfn"
@@ -33,3 +34,4 @@ iam_policy_name_for_dynamodb = "policy_for_dynamodb"
 iam_policy_attachment_to_sfn = "attach_policy_to_role_sfn"
 iam_policy_attachment_to_cloudwatch_sfn = "attach_policy_cloudwatch_sfn"
 state_machine_name = "sfn_state_machine"
+iam_cloudwatch_policy_for_sfn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"

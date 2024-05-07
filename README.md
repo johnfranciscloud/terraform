@@ -5,7 +5,7 @@
 I followed a modularized approach in this project. Each resource has been designed to be in seperate modules with data being passed on between them via terraform variables.
 
 
-### Terraform Infracstucture
+### Terraform Infrastucture
 
 Following resources are created in this project
 

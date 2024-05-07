@@ -5,6 +5,7 @@ module "step_function"{
   iam_policy_attachment_to_sfn = var.iam_policy_attachment_to_sfn
   iam_policy_attachment_to_cloudwatch_sfn = var.iam_policy_attachment_to_cloudwatch_sfn
   state_machine_name = var.state_machine_name
+  iam_cloudwatch_policy_for_sfn = var.iam_cloudwatch_policy_for_sfn
 }
 
 module "lambda"{
@@ -32,6 +33,7 @@ module "S3"{
   s3_tf_statement_id = var.s3_tf_statement_id
   allowed_lambda_action = var.allowed_lambda_action
   s3_force_destroy = var.s3_force_destroy
+  lambda_function_event = var.lambda_function_event
 
 }
 

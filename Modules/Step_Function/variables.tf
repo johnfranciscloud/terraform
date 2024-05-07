@@ -31,3 +31,10 @@ variable "state_machine_name" {
     nullable = false
   
 }
+
+variable "iam_cloudwatch_policy_for_sfn" {
+    description = "IAM cloudwatch policy for sfn"
+    type = string
+    nullable = false
+  
+}

@@ -191,3 +191,16 @@ variable "state_machine_name" {
   
 }
 
+variable "lambda_function_event" {
+    description = "Name of lambda function event"
+    type = set(string)
+    nullable = false
+  
+}
+
+variable "iam_cloudwatch_policy_for_sfn" {
+    description = "IAM cloudwatch policy for sfn"
+    type = string
+    nullable = false
+  
+}
