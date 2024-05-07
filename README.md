@@ -64,3 +64,16 @@ The Terraform configuration is organized into modules:
 
   I have created a dynamodb with table name "Files" and key name as "FileName"
 
+  ### Future Improvemnts
+
+  - Monitoring and Logging: 
+    Implement monitoring and logging solutions to track the performance and health of your infrastructure. This could include setting up CloudWatch alarms, logging Lambda function execution, and monitoring DynamoDB table activity.
+
+  - Scaling Capabilities: 
+    Implementing auto-scaling for Lambda functions based on metrics like incoming traffic or resource utilization and configuring DynamoDB auto-scaling to accommodate varying read and write throughput requirements.
+
+  - Cost Optimization
+    Removing the Step Function from the architecture is feasible since Lambda can directly insert data into DynamoDB, resulting in potential cost savings.
+
+
+
