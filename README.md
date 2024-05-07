@@ -25,45 +25,42 @@ Before starting,I have installed Terraform on my local machine and configured AW
 
 The Terraform configuration is organized into modules:
 
-Modules/Step_Function: Defines the Step Function State Machine.
+- Modules/Step_Function: Defines the Step Function State Machine.
 
-Modules/Lambda: Configures the AWS Lambda function.
+- Modules/Lambda: Configures the AWS Lambda function.
 
-Modules/S3_Bucket: Manages the S3 Bucket.
+- Modules/S3_Bucket: Manages the S3 Bucket.
 
-Modules/DynamoDB: Sets up the DynamoDB Table.
+- Modules/DynamoDB: Sets up the DynamoDB Table.
 
 
 ## Files Explanation
 
-main.tf: Main Terraform configuration file that invokes modules with necessary variables.
+- main.tf: Main Terraform configuration file that invokes modules with necessary variables.
 
-variables.tf: Defines input variables used throughout the configuration.
+- variables.tf: Defines input variables used throughout the configuration.
 
-provider.tf: Specifies the AWS provider configuration.
+- provider.tf: Specifies the AWS provider configuration.
 
-backend.tf: Configures the backend for storing Terraform state.
+- backend.tf: Configures the backend for storing Terraform state.
 
-output.tf: Defines output variables to display after Terraform applies changes.
+- output.tf: Defines output variables to display after Terraform applies changes.
 
 ### How does it works
 
-S3
+- S3
 
 I created a S3 bucket and utilized the S3 event notification to invoke a lambda function when a new object is uploaded to the newly created S3 bucket.
 
-Lambda
+- Lambda
 
 When lambda function invoked,it iterates through the record list in the event recieved and filters out the file name using the python script and invokes the Step Function. The filtered file name is passed as an input to the step function.
 
-Step Function
+- Step Function
 
 The Step function utilizes dynamodb integration to insert the record to dynamodb.
 
-DynamoDB
+- DynamoDB
 
 I have created a dynamodb with table name "Files" and key name as "FileName"
 
-
-
-[def]: image.png
