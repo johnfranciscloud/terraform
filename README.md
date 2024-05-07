@@ -9,10 +9,13 @@ I followed a modularized approach in this project. Each resource has been design
 
 Following resources are created in this project
 
-DynamoDB Table
-AWS Lambda Function
-S3 Bucket
-Step Function State Machine
+- DynamoDB Table
+
+- AWS Lambda Function
+
+- S3 Bucket
+
+- Step Function State Machine
 
 Prerequisites
 
