@@ -17,7 +17,7 @@ Following resources are created in this project
 
 - Step Function State Machine
 
-Prerequisites
+### Prerequisites
 
 Before starting,I have installed Terraform on my local machine and configured AWS account credentials with appropiate permissions.
 
