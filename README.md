@@ -1,6 +1,6 @@
 ### Project Architecture
 
-![Architecture][/Architecture/image.png] 
+![Architecture][Architecture/image.png] 
 
 I followed a modularized approach in this project. Each resource has been designed to be in seperate modules with data being passed on between them via terraform variables.
 
