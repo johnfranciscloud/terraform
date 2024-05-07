@@ -19,7 +19,7 @@ Following resources are created in this project
 
 ### Prerequisites
 
-Before starting,I have installed Terraform on my local machine and configured AWS account credentials with appropiate permissions.
+Before starting,I have installed Terraform on my local machine and configured AWS account credentials with appropiate permissions. Additionaly as a best practice I configured an S3 bucket as the backend for Terraform and used DynamoDB for state locking.
 
 ### Terraform File Structure
 
