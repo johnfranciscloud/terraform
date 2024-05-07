@@ -23,16 +23,24 @@ Before starting,I have installed Terraform on my local machine and configured AW
 The Terraform configuration is organized into modules:
 
 Modules/Step_Function: Defines the Step Function State Machine.
+
 Modules/Lambda: Configures the AWS Lambda function.
+
 Modules/S3_Bucket: Manages the S3 Bucket.
+
 Modules/DynamoDB: Sets up the DynamoDB Table.
 
-Files Explanation
+
+## Files Explanation
 
 main.tf: Main Terraform configuration file that invokes modules with necessary variables.
+
 variables.tf: Defines input variables used throughout the configuration.
+
 provider.tf: Specifies the AWS provider configuration.
+
 backend.tf: Configures the backend for storing Terraform state.
+
 output.tf: Defines output variables to display after Terraform applies changes.
 
 ### How does it works
